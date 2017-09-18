@@ -1,6 +1,8 @@
 import java.util.Timer;
 import java.util.TimerTask;
 
+// in this script i made a digital timer
+
 public class Tutorial {
 	
 	public static void main(String[] args) {
