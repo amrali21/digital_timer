@@ -5,10 +5,11 @@ import java.util.TimerTask;
 
 public class Tutorial {
 	
-	public static void main(String[] args) {
-Tutorial tut = new Tutorial();
-tut.runTimer();
-	}
+public static void main(String[] args) {
+    Tutorial tut = new Tutorial();
+    tut.runTimer();
+}
+    
 Timer timer = new Timer();
 int i = 0;
 TimerTask task = new TimerTask(){
@@ -16,14 +17,12 @@ TimerTask task = new TimerTask(){
 		String time = getTime(i);
 		System.out.println(time);
 		i++;
-
 	}
 };
 
 public void runTimer(){
 	timer.schedule(task, 0, 1000 );
 }
-
 
 static String getTime(int sec)
 {
@@ -51,7 +50,7 @@ static String getTime(int sec)
     // if we have a min or more
     else if (sec >= 60)                
     {
-        hours = 0;               //62
+        hours = 0;               
         minutes = sec / 60;
         seconds = sec % 60;
     }
@@ -62,8 +61,8 @@ static String getTime(int sec)
         minutes = 0;
         seconds = sec;
     }
-//i get integer hour minuite second. i want to transform them to strings:
-    
+
+    //i get integer hour minuite second. i want to transform them to strings:
     String strHours;
     String strMins; 
     String strSecs; 
@@ -75,19 +74,15 @@ static String getTime(int sec)
    
     if(minutes < 10)
    	 strMins = "0" + Integer.toString(minutes);
-   else
+    else
 	   strMins = Integer.toString(minutes);
     
     if(hours < 10)
-    	strHours = "0" + Integer.toString(hours);
-      else
-    	  strHours = Integer.toString(hours);
+        strHours = "0" + Integer.toString(hours);
+    else
+    	strHours = Integer.toString(hours);
     	
-        
     String time = strHours + ":" + strMins + ":" + strSecs;
     return time;
 }
-
-
-
 }
