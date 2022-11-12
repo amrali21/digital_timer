@@ -73,9 +73,9 @@ static String getTime(int sec)
     	strSecs = Integer.toString(seconds);
    
     if(minutes < 10)
-   	 strMins = "0" + Integer.toString(minutes);
+   	    strMins = "0" + Integer.toString(minutes);
     else
-	   strMins = Integer.toString(minutes);
+	    strMins = Integer.toString(minutes);
     
     if(hours < 10)
         strHours = "0" + Integer.toString(hours);
@@ -84,5 +84,5 @@ static String getTime(int sec)
     	
     String time = strHours + ":" + strMins + ":" + strSecs;
     return time;
-}
+    }
 }
